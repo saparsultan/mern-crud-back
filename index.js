@@ -10,7 +10,7 @@ app.use(express.json());
 
 // DATABASE CONNECTIONS
 
-mongoose.connect('mongodb://localhost:27017/merncrud?readPreference=primary&appname=MongoDB%20Compass&ssl=false', { useNewUrlParser: true})
+mongoose.connect('mongodb+srv://sultan:galimagalima0799@cluster0.ojryq.mongodb.net/merncrud?retryWrites=true&w=majority', { useNewUrlParser: true})
 
 app.post('/addfriend', async (req, res) => {
   const name = req.body.name;
