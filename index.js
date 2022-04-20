@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const FriendModel = require('./models/Friends');
+const connectDB = require('./db-path');
 require('dotenv').config();
 
 app.use(cors());
@@ -10,7 +11,7 @@ app.use(express.json());
 
 // DATABASE CONNECTIONS
 
-mongoose.connect('mongodb+srv://sultan:galimagalima0799@cluster0.ojryq.mongodb.net/merncrud?retryWrites=true&w=majority', { useNewUrlParser: true})
+mongoose.connect(connectDB, { useNewUrlParser: true})
 
 app.post('/addfriend', async (req, res) => {
   const name = req.body.name;
