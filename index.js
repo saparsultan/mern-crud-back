@@ -9,7 +9,6 @@ require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 
-// DATABASE CONNECTIONS
 
 mongoose.connect(connectDB, { useNewUrlParser: true})
 
